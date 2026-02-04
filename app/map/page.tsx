@@ -130,7 +130,7 @@ export default function MapPage() {
 
 	if (locationLoading) {
 		return (
-			<div className='flex flex-col items-center justify-center h-[calc(100vh-5rem)]'>
+			<div className='flex flex-col items-center justify-center h-[calc(100dvh-5rem)] -mb-24'>
 				<Loading />
 				<p className='mt-4 text-gray-500'>현재 위치를 확인하는 중...</p>
 			</div>
@@ -139,7 +139,7 @@ export default function MapPage() {
 
 	if (locationError) {
 		return (
-			<div className='flex flex-col items-center justify-center h-[calc(100vh-5rem)] p-4'>
+			<div className='flex flex-col items-center justify-center h-[calc(100dvh-5rem)] -mb-24 p-4'>
 				<svg className='w-16 h-16 text-gray-400 mb-4' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
 					<path
 						strokeLinecap='round'
@@ -164,7 +164,7 @@ export default function MapPage() {
 	}
 
 	return (
-		<div className='relative h-[calc(100vh-5rem)]'>
+		<div className='relative h-[calc(100dvh-5rem)] overflow-hidden -mb-24'>
 			{/* 지도 */}
 			<NaverMap
 				stops={stops}
