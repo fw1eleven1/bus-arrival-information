@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ```bash
 npm run dev      # 개발 서버 실행 (http://localhost:3000)
-npm run build    # 프로덕션 빌드
+npm run build    # 프로덕션 빌드 (--webpack 플래그로 PWA 지원)
 npm run lint     # ESLint 실행
 ```
 
@@ -39,6 +39,14 @@ npm run lint     # ESLint 실행
   - 지도: center, zoom, selectedStop, stops 전체 저장
 - **iOS Safari 위치 정보**: `useGeolocation` 훅에서 고정밀도(GPS) 실패 시 저정밀도(네트워크) fallback
 - **모바일 레이아웃**: flex 컨테이너에서 `min-w-0` + `flex-shrink-0` 조합으로 overflow 방지
+
+### PWA 설정
+
+- **next-pwa**: Service Worker 자동 생성 (빌드 시 public/sw.js 생성)
+- **아이콘**: `app/icon.tsx`, `app/apple-icon.tsx`로 동적 생성 (버스 아이콘, 파란 배경)
+- **manifest**: `public/manifest.json` - standalone 모드, 테마 색상 #3B82F6
+- **빌드**: Next.js 16에서 webpack 모드 필요 (`--webpack` 플래그)
+- **gitignore**: `sw.js`, `workbox-*.js` 파일은 빌드 시 생성되므로 제외
 
 ### 페이지 구조
 
