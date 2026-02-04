@@ -67,7 +67,7 @@ export default function BottomNav() {
 	const pathname = usePathname();
 
 	return (
-		<nav className='fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 pb-safe'>
+		<nav className='fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200'>
 			<div className='max-w-lg mx-auto px-4'>
 				<div className='flex justify-around'>
 					{navItems.map((item) => {
@@ -85,6 +85,8 @@ export default function BottomNav() {
 					})}
 				</div>
 			</div>
+			{/* iOS Safe Area 여백 */}
+			<div className='pb-safe' />
 		</nav>
 	);
 }

@@ -24,6 +24,7 @@ export const viewport: Viewport = {
   initialScale: 1,
   maximumScale: 1,
   userScalable: false,
+  viewportFit: 'cover',
   themeColor: '#3B82F6',
 };
 
@@ -35,7 +36,7 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body className={`${notoSansKr.className} bg-gray-50`}>
-        <main className="max-w-lg mx-auto min-h-screen pb-20">{children}</main>
+        <main className="max-w-lg mx-auto min-h-screen pb-24 mb-safe">{children}</main>
         <BottomNav />
       </body>
     </html>

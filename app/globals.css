@@ -24,3 +24,12 @@ body {
 	color: var(--foreground);
 	font-family: Arial, Helvetica, sans-serif;
 }
+
+/* iOS Safe Area */
+.pb-safe {
+	padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+.mb-safe {
+	margin-bottom: env(safe-area-inset-bottom, 0px);
+}
