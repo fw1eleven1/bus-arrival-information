@@ -164,7 +164,7 @@ export default function MapPage() {
 	}
 
 	return (
-		<div className='relative h-dvh overflow-hidden'>
+		<div className='relative h-dvh overflow-hidden mb-safe'>
 			{/* 지도 */}
 			<NaverMap
 				stops={stops}

@@ -284,7 +284,7 @@ export default function NaverMap({
 			{/* 현재 위치 버튼 */}
 			<button
 				onClick={moveToCurrentLocation}
-				className='absolute bottom-20 right-4 bg-white p-3 rounded-full shadow-lg hover:bg-gray-50 transition-colors z-10'
+				className='absolute bottom-20 right-4 bg-white p-3 rounded-full shadow-lg hover:bg-gray-50 transition-colors z-10 mb-safe'
 				title='현재 위치로 이동'>
 				<svg className='w-6 h-6 text-blue-500' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
 					<path
